@@ -99,7 +99,7 @@ class RedditAPI {
 			updateAccessToken(user_agent);
 		}
 
-		// // {"access_token": "-BUvJUh3q4zoUXUZK8u62YHlOz-j88A", "token_type": "bearer", "expires_in": 3600, "refresh_token": "-q9Fd0L6QSFLiYmpo4fgqseNYO8-2rw", "scope": "*"}
+		// // {"access_token": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "token_type": "bearer", "expires_in": 3600, "refresh_token": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "scope": "*"}
 		int generateRefreshToken(std::string user_agent, std::string duration) {
 			std::list<std::string> headers = {""};
 			std::string body = "grant_type=client_credentials&duration=" + duration; //&username=" + username + "&password=" + password;
@@ -116,7 +116,7 @@ class RedditAPI {
 			return ret_code;
 		}
 
-		// {"access_token": "-V5G4q2WBNog9KqXWsSbLjUdIVe26GA", "token_type": "bearer", "expires_in": 3600, "scope": "*"}
+		// {"access_token": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "token_type": "bearer", "expires_in": 3600, "scope": "*"}
 		int updateAccessToken(std::string user_agent) {
 			std::list<std::string> headers = {""};
 			std::string body = "grant_type=refresh_token&refresh_token=" + m_refresh_token; //"&username=" + username + "&password=" + password;
@@ -176,7 +176,7 @@ int main(int arg_count, char **arguments)
 	std::cout << get_value(authorization_fields["bot_id"]) << std::endl;
 	std::cout << get_value(authorization_fields["bot_secret"]) << std::endl;
 
-	RedditAPI reddit = RedditAPI(authorization_fields, "-mkN07zkkB4NmziSE17RoF3wgsztk-g");
+	RedditAPI reddit = RedditAPI(authorization_fields, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 	std::cout << reddit.getResponseBody() << std::endl;
 	// std::cout << reddit.getResponseHeader() << std::endl;
 	// std::cout << "RESPONSE HEADER IS\n" << response_header << std::endl;
