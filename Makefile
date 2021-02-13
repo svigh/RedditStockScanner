@@ -2,7 +2,7 @@ CXX=g++
 APP=reddit_scrape.cpp
 REST=-std=c++17
 OUT_BIN_NAME=reddit_scrape
-INCLUDE=-I./include/curlpp-0.8.1/include/
+INCLUDE=-I./include/curlpp-0.8.1/include/ -I./include/RedditAPI -I./include/RequestManager
 LD=-lm -lcurl -lcurlpp
 # DEFINES=-DVERBOSE
 
