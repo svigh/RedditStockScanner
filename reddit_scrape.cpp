@@ -10,7 +10,7 @@ int main(int arg_count, char **arguments)
 	};
 	setAuthorizationFieldsFromEnvVariables(authorization_fields);
 
-	RedditAPI reddit = RedditAPI(authorization_fields, "-5AC9LSEseyMYhkvAsCVm-kVocYPkxg", "-8dRVs5YwDbKj78rntVOdMgcZwPBiDQ");
+	RedditAPI reddit = RedditAPI(authorization_fields, "", "");
 	// RedditAPI reddit = RedditAPI(authorization_fields);
 	std::cout << reddit.getResponseBody() << std::endl;
 	std::cout << reddit.getRefreshToken() << std::endl;
